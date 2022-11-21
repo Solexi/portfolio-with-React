@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Flex, Heading, IconButton, Spacer, useColorMode, VStack } from '@chakra-ui/react';
+import {FaSun, FaMoon, FaGithub, FaLinkedin, FaInstagram} from 'react-icons/fa';
+import Header from './components/Header.js';
+import Profile from './components/Profile.js';
+import Social from './components/Social.js';
 
 function App() {
+  const {colorMode, toggleColorMode} = useColorMode();
+  const isDark = colorMode === "dark";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <VStack padding={5}>
+      <Flex w="100%">
+        <Heading ml='' size="md" fontWeight="semibold" color="chocolate">imSolexi</Heading>
+        <Spacer/>
+        <IconButton icon={<FaLinkedin />} isRound='true' backgroundColor={'chocolate'} border='black' onClick={toggleColorMode}></IconButton>
+        <IconButton ml={2} icon={<FaInstagram />} isRound='true' backgroundColor={'chocolate'} border='black' onClick={toggleColorMode}></IconButton>
+        <IconButton ml={2} icon={<FaGithub />} isRound='true' backgroundColor={'chocolate'} border='black' onClick={toggleColorMode}></IconButton>
+        <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' backgroundColor={'chocolate'} border='black' onClick={toggleColorMode}></IconButton>
+      </Flex>
+      <Header></Header>
+      <Social></Social>
+      <Profile></Profile>
+    </VStack>
   );
 }
 
