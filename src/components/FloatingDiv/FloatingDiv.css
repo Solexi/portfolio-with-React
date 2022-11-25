@@ -1,0 +1,21 @@
+.floatingdiv{
+    justify-content: space-around;
+    display: flex;
+    background: inherit;
+    box-shadow: 0px 19px 60px rgb(0 0 0 / 30%);
+    border-radius: 17px;
+    align-items: center;
+    padding: 0px 68px 0px 0px;
+    height: 4.5rem;
+}
+
+.floatingdiv>img{
+    transform: scale(0.4);
+}
+
+
+@media only screen and (max-width: 600px){
+    .floatingdiv{
+        padding: 0px 60px 0px 40px;
+    }
+}

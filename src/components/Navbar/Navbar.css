@@ -1,0 +1,39 @@
+*{
+    padding: 5;
+}
+.n-wrapper{
+    height: 10vh;
+    display: flex;
+}
+.n-left{
+    padding-right:30rem;
+    align-items: center;
+    display: flex;
+}
+@media only screen and (max-width : 800px){
+    .n-left{
+        padding-right:10rem;
+    }
+}
+.n-name{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: chocolate;
+}
+.n-right{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+.n-list{
+    flex: auto;
+    align-self: center;
+}
+
+.n-list >ul{
+    display: flex;
+    gap: 2rem;
+    margin-right: 4rem;
+}
